@@ -1,0 +1,7 @@
+body {
+    background-color: burlywood;
+}
+
+.mensaje-importante {
+    background-color: rgba(255,0,0,0.5);
+}

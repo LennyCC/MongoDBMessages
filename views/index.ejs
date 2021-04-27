@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Vista del Index</title>
+</head>
+<body>
+    <% if (messages.length > 0) { %>
+    <h1>Mensajes acumulados</h1>
+    <% messages.forEach(function(message){ %>
+        
+        <% if (message.type == "1")  {%>
+        <a href="/message/<%= message.id %>"><p class="mensaje-importante"><%= message.content %> -- <%= message.date %></p></a>
+        <% } else if (message.type == "2") { %>
+        <a href="/message/<%= message.id %>"><p><%= message.content %> -- <%= message.date %></p></a>
+        <% } %>
+        <% }); %>
+
+    <% } else { %>
+        <h1>No hay mensajes por el momento</h1>
+    <% } %> 
+
+    <a href="/add-message">Añadir nueva mensaje</a>
+
+    
+</body>
+</html> 

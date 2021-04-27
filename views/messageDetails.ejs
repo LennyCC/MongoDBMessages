@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Detalles del mensaje</title>
+
+</head>
+<body>
+    <div class="w3-container">
+        <h2>Detalles del mensaje <%= message.id %></h2>
+
+        <table class="w3-table">
+          <tr class="w3-lime">
+            <th>Contenido del mensaje</th>
+            <th>Fecha</th>
+            <th>Tipo de mensaje</th>
+          </tr>
+          <tr>
+            <th><%= message.content %></th>
+            <th><%= message.date %></th>
+            <th><%= message.typeMessageTxt %></th>
+          </tr>
+        </table>
+      </div>       
+    
+</body>
+</html>
